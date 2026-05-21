@@ -131,6 +131,15 @@ body {
   line-height: 1.72;
 }
 
+.keywords {
+  margin-top: 1.1rem;
+}
+
+.author-list {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 .team-row {
   display: flex;
   justify-content: center;

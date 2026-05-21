@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Conquer real-robot demonstrations">
-  <meta name="keywords" content="quadruped robot, multi-agent control, real robot demo">
+  <meta name="description" content="Conquer: Continual Quadruped Robots Coordination via Sementic Skill Discover">
+  <meta name="keywords" content="reinforcement learning, quadruped robot, multi-robot coordination, continual robot learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Conquer</title>
 
@@ -43,12 +43,12 @@
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
                 <span class="project-name">Conquer</span>:<br>
-                Quadruped Team Coordination
+                Continual Quadruped Robots Coordination via Sementic Skill Discover
               </h1>
               <div class="is-size-4 publication-authors">
-                <span class="author-block">Real Robot Demonstrations</span>
+                <span class="author-block">Daoqing Wang, Yuchen Xiao, Weixuan Huang, Zhilong Zhang, Shenghua Wan, Meng Li, Lei Yuan, Yang Yu</span>
                 <br>
-                <span class="author-block publication-venue">Single-dog tracking, fixed-point control, and multi-dog coordination</span>
+                <span class="author-block publication-venue">CoRL 2026 Conference Submission · Real Robot Demonstrations</span>
               </div>
 
               <div class="publication-links">
@@ -145,15 +145,33 @@
             <h2 class="title is-2">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Conquer studies real-world quadruped coordination across tracking and fixed-point
-                control scenarios. The demonstrations on this page collect single-robot and
-                multi-robot deployments, highlighting how the system scales from one dog to
-                coordinated teams while preserving stable, physical behavior on hardware.
+                Multi-quadruped coordination has attracted increasing attention due to its stronger
+                payload capacity, broader contact coverage, and better adaptability to challenging
+                tasks. However, existing multi-quadruped manipulation methods typically focus on a
+                closed task family, and thus struggle to continually acquire and reuse coordination
+                skills in open-ended task streams.
               </p>
               <p>
-                The page is structured as a paper project site: concise project summary first,
-                real-robot videos as the primary evidence, and citation metadata for integration
-                with the final manuscript.
+                To address this issue, we propose Conquer, a semantic skill-library framework that
+                models continual multi-quadruped coordination as a skill retrieve-adapt-update
+                process. For each incoming task, Conquer first builds a semantic descriptor from
+                pre-execution information and retrieves a relevant skill from the library; it then
+                either reuses the retrieved policy or adapts a new skill adapter through MAPPO, and
+                finally updates or expands the library using descriptors extracted from successful
+                trajectories. This process is built on a team-structured Self-Allies-Goal (SAG)
+                backbone that supports variable-size robot teams while keeping stored skills
+                parameter-isolated.
+              </p>
+              <p>
+                Experiments on a 14-task Isaac Lab benchmark show that Conquer achieves 0.9626
+                final average success rate with strong forward transfer and no forgetting.
+                Real-world rollouts on Unitree Go2 teams further demonstrate its deployment
+                feasibility for real-world multi-quadruped coordination.
+              </p>
+              <p class="keywords">
+                <strong>Primary Keyword:</strong> Reinforcement learning for physical robot control<br>
+                <strong>Secondary Keyword:</strong> Robot navigation and locomotion<br>
+                <strong>Free-text Keywords:</strong> Continual Robot Learning; Multi-Robot Coordination
               </p>
             </div>
           </div>
@@ -166,12 +184,10 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds">
             <h2 class="title is-2">Team</h2>
-            <div class="team-row">
-              <div class="team-member">
-                <div class="team-avatar" aria-hidden="true">C</div>
-                <p><strong>Conquer Team</strong></p>
-              </div>
-            </div>
+            <p class="author-list">
+              Daoqing Wang, Yuchen Xiao, Weixuan Huang, Zhilong Zhang, Shenghua Wan,
+              Meng Li, Lei Yuan, Yang Yu
+            </p>
           </div>
         </div>
       </div>
@@ -181,8 +197,8 @@
       <div class="container content">
         <h2 class="title is-2">BibTeX</h2>
         <pre><code>@misc{conquer2026,
-  title  = {Conquer: Quadruped Team Coordination},
-  author = {Conquer Team},
+  title  = {Conquer: Continual Quadruped Robots Coordination via Sementic Skill Discover},
+  author = {Wang, Daoqing and Xiao, Yuchen and Huang, Weixuan and Zhang, Zhilong and Wan, Shenghua and Li, Meng and Yuan, Lei and Yu, Yang},
   year   = {2026},
 }</code></pre>
       </div>
