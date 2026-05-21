@@ -1,0 +1,198 @@
+body {
+  color: #1c1c1c;
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.navbar {
+  min-height: 3.25rem;
+}
+
+.navbar-brand {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-menu {
+  justify-content: center;
+}
+
+.navbar-start {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.publication-header .hero-body {
+  padding-bottom: 2rem;
+  padding-top: 2.7rem;
+}
+
+.publication-title {
+  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 1.2rem;
+}
+
+.project-name {
+  color: #8b0000;
+  font-weight: 700;
+}
+
+.publication-authors {
+  color: #252525;
+  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.publication-venue {
+  color: #565656;
+  display: inline-block;
+  font-size: 1.05rem;
+  margin-top: 0.35rem;
+}
+
+.publication-links {
+  margin-top: 1.35rem;
+}
+
+.link-block {
+  display: inline-block;
+  margin: 0.25rem 0.16rem;
+}
+
+.button.is-dark {
+  background-color: #262626;
+  border: 0;
+  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.button.is-dark:hover,
+.button.is-dark:focus {
+  background-color: #111;
+  transform: translateY(-1px);
+}
+
+.teaser {
+  padding-bottom: 0.75rem;
+  padding-top: 0;
+}
+
+.teaser video,
+.demo-item video {
+  background: #f2f2f2;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.teaser video {
+  aspect-ratio: 16 / 9;
+}
+
+.section-title {
+  padding-bottom: 0.65rem;
+  text-align: center;
+}
+
+.demo-grid {
+  display: grid;
+  gap: 1.7rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.demo-item {
+  text-align: center;
+}
+
+.demo-item .title {
+  font-size: 1.36rem;
+  margin-bottom: 0.75rem;
+}
+
+.demo-item video {
+  aspect-ratio: 16 / 9;
+}
+
+.compact-section {
+  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+}
+
+.content p {
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.team-member {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.team-avatar {
+  align-items: center;
+  background: #f1f1f1;
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+  color: #8b0000;
+  display: flex;
+  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  height: 6.25rem;
+  justify-content: center;
+  width: 6.25rem;
+}
+
+pre {
+  border-radius: 8px;
+  font-size: 0.92rem;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 768px) {
+  .publication-header .hero-body {
+    padding-top: 1.75rem;
+  }
+
+  .publication-title {
+    font-size: 2rem;
+  }
+
+  .publication-authors {
+    font-size: 1.1rem !important;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

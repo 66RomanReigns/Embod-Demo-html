@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Conquer real-robot demonstrations">
+  <meta name="keywords" content="quadruped robot, multi-agent control, real robot demo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conquer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#top" aria-label="Home">
+        <span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span>
+      </a>
+      <button class="navbar-burger" type="button" aria-label="menu" aria-expanded="false" data-target="main-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="main-menu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#real-robot-demos">Demos</a>
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#bibtex">BibTeX</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <span class="project-name">Conquer</span>:<br>
+                Quadruped Team Coordination
+              </h1>
+              <div class="is-size-4 publication-authors">
+                <span class="author-block">Real Robot Demonstrations</span>
+                <br>
+                <span class="author-block publication-venue">Single-dog tracking, fixed-point control, and multi-dog coordination</span>
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="#real-robot-demos" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video" aria-hidden="true"></i></span>
+                    <span>Demo Videos</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#abstract" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
+                    <span>Abstract</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teaser" aria-labelledby="teaser-title">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds no-bottom-padding">
+            <h2 id="teaser-title" class="sr-only">Main demo</h2>
+            <video id="teaser" autoplay muted loop playsinline controls preload="metadata"
+              poster="./assets/posters/three-dog-tracking.jpg"
+              src="./assets/videos/three-dog-tracking.mp4"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="real-robot-demos">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2 section-title">Real-robot Demonstrations</h2>
+            <div class="demo-grid">
+              <article class="demo-item">
+                <h3 class="title is-3">Single-dog Tracking</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/single-dog-tracking.jpg"
+                  src="./assets/videos/single-dog-tracking.mp4"></video>
+              </article>
+              <article class="demo-item">
+                <h3 class="title is-3">Single-dog Fixed-point</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/single-dog-fixed.jpg"
+                  src="./assets/videos/single-dog-fixed.mp4"></video>
+              </article>
+              <article class="demo-item">
+                <h3 class="title is-3">Two-dog Fixed-point</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/two-dog-fixed.jpg"
+                  src="./assets/videos/two-dog-fixed.mp4"></video>
+              </article>
+              <article class="demo-item">
+                <h3 class="title is-3">Three-dog Tracking</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/three-dog-tracking.jpg"
+                  src="./assets/videos/three-dog-tracking.mp4"></video>
+              </article>
+              <article class="demo-item">
+                <h3 class="title is-3">Three-dog Fixed-point</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/three-dog-fixed.jpg"
+                  src="./assets/videos/three-dog-fixed.mp4"></video>
+              </article>
+              <article class="demo-item">
+                <h3 class="title is-3">Four-dog Fixed-point</h3>
+                <video autoplay muted loop playsinline controls preload="metadata"
+                  poster="./assets/posters/four-dog-fixed.jpg"
+                  src="./assets/videos/four-dog-fixed.mp4"></video>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="abstract">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Conquer studies real-world quadruped coordination across tracking and fixed-point
+                control scenarios. The demonstrations on this page collect single-robot and
+                multi-robot deployments, highlighting how the system scales from one dog to
+                coordinated teams while preserving stable, physical behavior on hardware.
+              </p>
+              <p>
+                The page is structured as a paper project site: concise project summary first,
+                real-robot videos as the primary evidence, and citation metadata for integration
+                with the final manuscript.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Team</h2>
+            <div class="team-row">
+              <div class="team-member">
+                <div class="team-avatar" aria-hidden="true">C</div>
+                <p><strong>Conquer Team</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bibtex">
+      <div class="container content">
+        <h2 class="title is-2">BibTeX</h2>
+        <pre><code>@misc{conquer2026,
+  title  = {Conquer: Quadruped Team Coordination},
+  author = {Conquer Team},
+  year   = {2026},
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="./static/js/index.js"></script>
+</body>
+</html>
