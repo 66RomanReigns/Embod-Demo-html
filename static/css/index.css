@@ -117,6 +117,10 @@ body {
   aspect-ratio: 16 / 9;
 }
 
+.demo-item video.lazy-video {
+  cursor: pointer;
+}
+
 .compact-section {
   padding-bottom: 2rem;
   padding-top: 2.5rem;

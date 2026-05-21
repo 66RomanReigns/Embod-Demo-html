@@ -10,7 +10,36 @@ if (burger && menu) {
   });
 }
 
-const videos = Array.from(document.querySelectorAll("video"));
+const lazyVideos = Array.from(document.querySelectorAll("video.lazy-video"));
+
+function loadLazyVideo(video) {
+  if (!video.dataset.src || video.currentSrc) {
+    return;
+  }
+
+  video.src = video.dataset.src;
+  video.load();
+}
+
+lazyVideos.forEach(video => {
+  video.addEventListener("pointerdown", () => {
+    loadLazyVideo(video);
+  });
+
+  video.addEventListener("click", () => {
+    loadLazyVideo(video);
+    video.play().catch(() => undefined);
+  });
+
+  video.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      loadLazyVideo(video);
+      video.play().catch(() => undefined);
+    }
+  });
+});
+
+const videos = Array.from(document.querySelectorAll("video")).filter(video => !video.classList.contains("lazy-video"));
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
