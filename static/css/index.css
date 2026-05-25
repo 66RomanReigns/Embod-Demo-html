@@ -98,7 +98,8 @@ body {
 }
 
 .figure-overview figcaption,
-.figure-normal figcaption {
+.figure-normal figcaption,
+.figure-small figcaption {
   color: #565656;
   font-size: 0.95rem;
   line-height: 1.55;
@@ -120,6 +121,20 @@ body {
   height: auto;
   margin: 0 auto;
   max-width: 68%;
+}
+
+.figure-small {
+  text-align: center;
+}
+
+.figure-small img {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .demo-item video {
@@ -239,7 +254,8 @@ pre {
     grid-template-columns: 1fr;
   }
 
-  .figure-normal img {
+  .figure-normal img,
+  .figure-small img {
     max-width: 100%;
   }
 
