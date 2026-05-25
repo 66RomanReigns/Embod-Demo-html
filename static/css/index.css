@@ -73,6 +73,16 @@ body {
   transform: translateY(-1px);
 }
 
+.results-summary {
+  color: #363636;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  margin-bottom: 2.2rem;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .figure-overview {
   text-align: center;
 }

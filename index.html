@@ -46,9 +46,9 @@
                 Continual Quadruped Robots Coordination via Sementic Skill Discover
               </h1>
               <div class="is-size-4 publication-authors">
-                <span class="author-block">Daoqing Wang, Yuchen Xiao, Weixuan Huang, Zhilong Zhang, Shenghua Wan, Meng Li, Lei Yuan, Yang Yu</span>
+                <span class="author-block">Anonymous Authors</span>
                 <br>
-                <span class="author-block publication-venue">CoRL 2026 Conference Submission · Real Robot Demonstrations</span>
+                <span class="author-block publication-venue">Real Robot Demonstrations</span>
               </div>
 
               <div class="publication-links">
@@ -113,17 +113,33 @@
       </div>
     </section>
 
-    <section class="section compact-section" id="case-study">
+    <section class="section compact-section" id="comparison">
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-2 section-title">Case Study</h2>
+            <h2 class="title is-2 section-title">Comparison with Baselines</h2>
+
+            <p class="results-summary has-text-centered" style="margin-top:0.5rem;">
+              Conquer achieves <strong>0.9626 final average success rate</strong> on a 14-task
+              Isaac Lab benchmark, consistently outperforming prior continual RL and multi-agent
+              approaches including MAPPO, PackNet, EWC, and Progressive Networks.
+            </p>
+
             <figure class="figure-normal">
-              <img src="./assets/figures/case_study.png" alt="Case study analysis" loading="lazy">
+              <img src="./assets/figures/main_comparison.png" alt="Main comparison across 6 methods" loading="lazy">
               <figcaption>
-                Semantic transfer analysis showing how skills learned in earlier tasks
-                accelerate adaptation to new coordination scenarios. t-SNE visualization
-                reveals meaningful clustering of task semantics.
+                Success rate comparison across six methods on the 14-task benchmark. Conquer
+                achieves the highest success rate with strong forward transfer and zero forgetting,
+                demonstrating the effectiveness of semantic skill retrieval and adaptation.
+              </figcaption>
+            </figure>
+
+            <figure class="figure-normal">
+              <img src="./assets/figures/growth_curve.png" alt="Training growth curves" loading="lazy">
+              <figcaption>
+                Per-task success rate growth curves. Conquer rapidly acquires new skills while
+                preserving performance on previously learned tasks, showing effective
+                catastrophic forgetting prevention across the full task stream.
               </figcaption>
             </figure>
           </div>
@@ -323,11 +339,6 @@
                 Real-world rollouts on Unitree Go2 teams further demonstrate its deployment
                 feasibility for real-world multi-quadruped coordination.
               </p>
-              <p class="keywords">
-                <strong>Primary Keyword:</strong> Reinforcement learning for physical robot control<br>
-                <strong>Secondary Keyword:</strong> Robot navigation and locomotion<br>
-                <strong>Free-text Keywords:</strong> Continual Robot Learning; Multi-Robot Coordination
-              </p>
             </div>
           </div>
         </div>
@@ -340,8 +351,7 @@
           <div class="column is-two-thirds">
             <h2 class="title is-2">Team</h2>
             <p class="author-list">
-              Daoqing Wang, Yuchen Xiao, Weixuan Huang, Zhilong Zhang, Shenghua Wan,
-              Meng Li, Lei Yuan, Yang Yu
+              Anonymous Team
             </p>
           </div>
         </div>
@@ -353,7 +363,7 @@
         <h2 class="title is-2">BibTeX</h2>
         <pre><code>@misc{conquer2026,
   title  = {Conquer: Continual Quadruped Robots Coordination via Sementic Skill Discover},
-  author = {Wang, Daoqing and Xiao, Yuchen and Huang, Weixuan and Zhang, Zhilong and Wan, Shenghua and Li, Meng and Yuan, Lei and Yu, Yang},
+  author = {Anonymous},
   year   = {2026},
 }</code></pre>
       </div>
