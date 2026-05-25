@@ -10,43 +10,39 @@ if (burger && menu) {
   });
 }
 
-const lazyVideos = Array.from(document.querySelectorAll("video.lazy-video"));
-
 function loadLazyVideo(video) {
-  if (!video.dataset.src || video.currentSrc) {
+  if (!video.dataset.src || video.src) {
     return;
   }
-
   video.src = video.dataset.src;
   video.load();
 }
 
-lazyVideos.forEach(video => {
-  video.addEventListener("pointerdown", () => {
-    loadLazyVideo(video);
-  });
-
-  video.addEventListener("click", () => {
-    loadLazyVideo(video);
-    video.play().catch(() => undefined);
-  });
-
-  video.addEventListener("keydown", event => {
-    if (event.key === "Enter" || event.key === " ") {
-      loadLazyVideo(video);
-      video.play().catch(() => undefined);
-    }
-  });
-});
-
-const videos = Array.from(document.querySelectorAll("video")).filter(video => !video.classList.contains("lazy-video"));
-
 if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
+  const loadObserver = new IntersectionObserver(
+    entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          loadLazyVideo(entry.target);
+          loadObserver.unobserve(entry.target);
+        }
+      }
+    },
+    { rootMargin: "400px" }
+  );
+
+  document.querySelectorAll("video.lazy-video").forEach(video => {
+    loadObserver.observe(video);
+  });
+
+  const playObserver = new IntersectionObserver(
     entries => {
       for (const entry of entries) {
         const video = entry.target;
         if (entry.isIntersecting) {
+          if (!video.src && video.dataset.src) {
+            loadLazyVideo(video);
+          }
           video.play().catch(() => undefined);
         } else {
           video.pause();
@@ -56,5 +52,7 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.18 }
   );
 
-  videos.forEach(video => observer.observe(video));
+  document.querySelectorAll("video").forEach(video => {
+    playObserver.observe(video);
+  });
 }
